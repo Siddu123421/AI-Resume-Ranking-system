@@ -9,5 +9,8 @@ matplotlib==3.9.0
 wordcloud==1.9.3
 pypdf==3.9.1
 python-docx
+spacy
+sentence-transformers
+
 
 
