@@ -38,9 +38,6 @@ except Exception:
 # --- App Title ---
 st.title("🤖 AI Resume Ranking System (Advanced)")
 
-
-
-
 # Check if SpaCy model exists, otherwise download
 try:
     from spacy.lang.en import English
