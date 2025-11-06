@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 import spacy
 import base64
 
+st.set_page_config(page_title="AI Resume Ranking System", page_icon="🤖", layout="wide")
+
 # --- Streamlit page setup (must be first) ---
 st.set_page_config(
     page_title="AI Resume Ranking System",
