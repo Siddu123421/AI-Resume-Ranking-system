@@ -12,11 +12,11 @@ import os
 # Check if SpaCy model exists, otherwise download
 try:
     from spacy.lang.en import English
-nlp = English()
+    nlp = spacy.load("en_core_web_sm")
 except OSError:
     os.system("python -m spacy download en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
-
+    from spacy.lang.en import English
+    nlp = English()
 
 # ---------- Helper functions ----------
 def clean_text(t):
