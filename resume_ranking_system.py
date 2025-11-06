@@ -9,6 +9,22 @@ import matplotlib.pyplot as plt
 import spacy
 import os
 
+# --- Display IntelliHire Logo at Top ---
+from PIL import Image
+
+try:
+    logo = Image.open("A_Logo_Image_IntelliHire.png")
+    st.markdown(
+        "<div style='text-align:center;'>"
+        "<img src='data:image/png;base64,{}' width='200'>"
+        "</div>".format(
+            base64.b64encode(open("A_Logo_Image_IntelliHire.png", "rb").read()).decode()
+        ),
+        unsafe_allow_html=True,
+    )
+except Exception as e:
+    st.warning("⚠️ IntelliHire logo not found or couldn't load.")
+
 # Check if SpaCy model exists, otherwise download
 try:
     from spacy.lang.en import English
