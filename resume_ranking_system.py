@@ -1,4 +1,4 @@
-# ---------- Resume Ranking Streamlit App (Full Version) ----------
+# ----------- Resume Ranking Streamlit App (Full Version) -----------
 import streamlit as st
 import pandas as pd, os, re
 from pypdf import PdfReader
@@ -7,27 +7,36 @@ from sentence_transformers import SentenceTransformer, util
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import spacy
-from PIL import Image
 import base64
 
-# --- Streamlit page setup must be first command ---
-st.set_page_config(page_title="AI Resume Ranking System", page_icon="🤖", layout="wide")
+# --- Streamlit page setup (must be first) ---
+st.set_page_config(
+    page_title="AI Resume Ranking System",
+    page_icon="🤖",
+    layout="wide"
+)
 
-# --- Display IntelliHire Logo at Top ---
+# --- IntelliHire Logo Section ---
 try:
-    logo = Image.open("A_Logo_Image_IntelliHire.png")
+    with open("A_Logo_Image_IntelliHire.png", "rb") as img_file:
+        img_bytes = img_file.read()
+    encoded_img = base64.b64encode(img_bytes).decode()
     st.markdown(
-        "<div style='text-align:center;'>"
-        "<img src='data:image/png;base64,{}' width='200'>"
-        "</div>".format(
-            base64.b64encode(open("A_Logo_Image_IntelliHire.png", "rb").read()).decode()
-        ),
-        unsafe_allow_html=True,
+        f"""
+        <div style="text-align:center;">
+            <img src="data:image/png;base64,{encoded_img}" 
+                 style="width:180px; max-width:60%; height:auto; margin-bottom:15px;">
+        </div>
+        """,
+        unsafe_allow_html=True
     )
-except Exception as e:
-    st.warning("⚠ IntelliHire logo not found or couldn't load.")
+except Exception:
+    st.warning("⚠️ IntelliHire logo not found or couldn't load.")
 
+# --- App Title ---
 st.title("🤖 AI Resume Ranking System (Advanced)")
+
+
 
 
 # Check if SpaCy model exists, otherwise download
