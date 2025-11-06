@@ -9,6 +9,10 @@ import matplotlib.pyplot as plt
 import spacy
 import base64
 
+# Load the pretrained model once
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
 # ✅ Keep only this one
 st.set_page_config(
     page_title="AI Resume Ranking System",
