@@ -76,7 +76,7 @@ def extract_skills(text):
         "pandas","numpy","scikit-learn","tensorflow","pytorch","keras","nlp",
         "opencv","power bi","tableau"
     ]
-    found = [s for s in skills if re.search(rf"\b{s}\b", text.lower())]
+    found = [s for s in skills if re.search(rf"\b{re.escape(s)}\b", text.lower())]
     return list(set(found))
 
 def degree_score(text):
