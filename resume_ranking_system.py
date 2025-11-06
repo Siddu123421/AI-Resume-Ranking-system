@@ -12,6 +12,9 @@ import os
 # --- Display IntelliHire Logo at Top ---
 from PIL import Image
 
+# --- Streamlit page setup must be first command ---
+st.set_page_config(page_title="AI Resume Ranking System", page_icon="🤖", layout="wide")
+
 try:
     logo = Image.open("A_Logo_Image_IntelliHire.png")
     st.markdown(
