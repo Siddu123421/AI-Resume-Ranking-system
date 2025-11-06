@@ -1,5 +1,6 @@
 streamlit==1.39.0
 spacy==3.7.2
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0.tar.gz
 sentence-transformers==2.2.2
 huggingface-hub==0.10.1
 torch==2.0.1
