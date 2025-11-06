@@ -4,13 +4,18 @@ import pandas as pd, os, re
 from pypdf import PdfReader
 from docx import Document
 from sentence_transformers import SentenceTransformer, util
-import spacy
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+import spacy
+import os
 
-# ---------- Load models ----------
-nlp = spacy.load("en_core_web_sm")
-model = SentenceTransformer("all-MiniLM-L6-v2")
+# Check if SpaCy model exists, otherwise download
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    os.system("python -m spacy download en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 
 # ---------- Helper functions ----------
 def clean_text(t):
