@@ -104,8 +104,6 @@ def compute_score(job_desc, resume_text):
     final = 0.55*sim + 0.25*skill_fit + 0.12*yrs_norm + 0.08*deg
     return sim, skill_fit, yrs_norm, deg, final, res_skills
 
-# ---------- Streamlit UI ----------
-st.set_page_config(page_title="AI Resume Ranking System", page_icon="🤖", layout="wide")
 st.title("🤖 AI Resume Ranking System (Advanced)")
 
 st.write("Upload a job description and resume files to get ranking, analysis, and skill insights.")
