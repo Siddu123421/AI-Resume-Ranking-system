@@ -7,14 +7,13 @@ from sentence_transformers import SentenceTransformer, util
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import spacy
-import os
-
-# --- Display IntelliHire Logo at Top ---
 from PIL import Image
+import base64
 
 # --- Streamlit page setup must be first command ---
 st.set_page_config(page_title="AI Resume Ranking System", page_icon="🤖", layout="wide")
 
+# --- Display IntelliHire Logo at Top ---
 try:
     logo = Image.open("A_Logo_Image_IntelliHire.png")
     st.markdown(
@@ -26,7 +25,7 @@ try:
         unsafe_allow_html=True,
     )
 except Exception as e:
-    st.warning("⚠️ IntelliHire logo not found or couldn't load.")
+    st.warning("⚠ IntelliHire logo not found or couldn't load.")
 
 st.title("🤖 AI Resume Ranking System (Advanced)")
 
