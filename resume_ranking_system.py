@@ -11,7 +11,8 @@ import os
 
 # Check if SpaCy model exists, otherwise download
 try:
-    nlp = spacy.load("en_core_web_sm")
+    from spacy.lang.en import English
+nlp = English()
 except OSError:
     os.system("python -m spacy download en_core_web_sm")
     nlp = spacy.load("en_core_web_sm")
