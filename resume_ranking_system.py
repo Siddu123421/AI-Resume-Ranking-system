@@ -28,6 +28,9 @@ try:
 except Exception as e:
     st.warning("⚠️ IntelliHire logo not found or couldn't load.")
 
+st.title("🤖 AI Resume Ranking System (Advanced)")
+
+
 # Check if SpaCy model exists, otherwise download
 try:
     from spacy.lang.en import English
