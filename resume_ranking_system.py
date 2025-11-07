@@ -19,13 +19,7 @@ st.set_page_config(
     page_icon="🤖",
     layout="wide"
 )
-# ---------------- Google Site Verification ----------------
-st.markdown("""
-<meta name="google-site-verification" content="q58qXxgz071gy5x2EZNfJ6m_eB3ACPTFeWxbc5-UxDU" />
-""", unsafe_allow_html=True)
-# -----------------------------------------------------------
 
-# --- IntelliHire Logo Section ---
 try:
     with open("A_Logo_Image_IntelliHire.png", "rb") as img_file:
         img_bytes = img_file.read()
