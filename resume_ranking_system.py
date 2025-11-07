@@ -9,6 +9,12 @@ import matplotlib.pyplot as plt
 import spacy
 import base64
 
+# ---------------- Google Site Verification ----------------
+st.markdown("""
+<meta name="google-site-verification" content="q58qXxgz071gy5x2EZNfJ6m_eB3ACPTFeWxbc5-UxDU" />
+""", unsafe_allow_html=True)
+# -----------------------------------------------------------
+
 # Load the pretrained model once
 from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('all-MiniLM-L6-v2')
