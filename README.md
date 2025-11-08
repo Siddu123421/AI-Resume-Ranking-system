@@ -29,6 +29,10 @@ It helps recruiters and HR professionals identify the most relevant candidates q
 
 ---
 
+📊 Results
+Achieved an average 92% accuracy in matching resumes to job descriptions using NLP-based semantic similarity.
+Reduced manual screening time by 70%, improving recruiter efficiency through automated ranking and visual analytics.
+
 ### 🚀 How to Run  
 
 ```bash
@@ -42,7 +46,10 @@ pip install -r requirements.txt
 # Run Streamlit app
 streamlit run resume_ranking_system.py
 
-📊 Results
-Achieved an average 92% accuracy in matching resumes to job descriptions using NLP-based semantic similarity.
-Reduced manual screening time by 70%, improving recruiter efficiency through automated ranking and visual analytics.
+
+
+
+
+
+
 
